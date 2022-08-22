@@ -1,0 +1,69 @@
+<h3>Great vibes private ltd Assses-2</h3>
+
+<form action="/movie" method="POST" autocomplete="off">
+  <input type="hidden" name="_id" value="{{movie._id}}" />
+  <div class="form-group">
+    <label>Movie Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="movie"
+      placeholder="Movie Name"
+      value="{{movie.movie}}"
+    />
+    <div class="text-danger">
+      {{movie.fullNameError}}</div>
+  </div>
+  <div class="form-group">
+    <label>Rating</label>
+    <input
+      type="number"
+      class="form-control"
+      name="rating"
+      placeholder="rating"
+      value="{{movie.rating}}"
+    />
+    <div class="text-danger">
+      {{movie.emailError}}</div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>cast</label>
+      <input
+        type="text "
+        class="form-control"
+        name="cast"
+        placeholder="cast"
+        value="{{movie.cast}}"
+      />
+    </div>
+    <div class="form-group col-md-6">
+      <label>genre</label>
+      <input
+        type="text"
+        class="form-control"
+        name="genre"
+        placeholder="genre"
+        value="{{movie.genre}}"
+      />
+    </div>
+    <div class="form-group col-md-6">
+      <label>releasedate</label>
+      <input
+        type="text"
+        class="form-control"
+        name="release"
+        placeholder="releasedate"
+        value="{{movie.releasedate}}"
+      />
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>
+      Submit</button>
+    <a class="btn btn-secondary" href="/movie/list"><i
+        class="fa fa-list-alt"
+      ></i>
+      View All</a>
+  </div>
+</form>

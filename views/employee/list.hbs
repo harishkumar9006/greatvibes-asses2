@@ -1,0 +1,35 @@
+<h3><a class="btn btn-secondary" href="/movie"><i class="fa fa-plus"></i>
+    Create New</a>
+  Movie List</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>moviename</th>
+      <th>rating</th>
+      <th>cast</th>
+      <th>genre</th>
+      <th>releasedate</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list}}
+      <tr>
+        <td>{{this.moviename}}</td>
+        <td>{{this.rating}}</td>
+        <td>{{this.cast}}</td>
+        <td>{{this.genre}}</td>
+        <td>{{this.releasedate}}</td>
+        <td>
+          <a href="/movie/{{this._id}}"><i
+              class="fa fa-pencil fa-lg"
+              aria-hidden="true"
+            ></i></a>
+          <a
+            href="/movie/delete/{{this._id}}"
+            onclick="return confirm('Are you sure to delete this record ?');"
+          ><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
